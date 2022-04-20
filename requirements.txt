@@ -6,8 +6,14 @@
 #
 aniso8601==8.0.0
     # via flask-restful
+certifi==2021.10.8
+    # via requests
+charset-normalizer==2.0.12
+    # via requests
 click==7.1.2
     # via flask
+dnspython==2.2.1
+    # via -r requirements.in
 flask==1.1.2
     # via
     #   -r requirements.in
@@ -20,6 +26,8 @@ flask-jwt-extended==4.3.1
     # via -r requirements.in
 flask-restful==0.3.8
     # via -r requirements.in
+idna==3.3
+    # via requests
 itsdangerous==1.1.0
     # via flask
 jinja2==2.11.2
@@ -38,6 +46,8 @@ pendulum==2.1.2
     # via -r requirements.in
 pyjwt==2.3.0
     # via flask-jwt-extended
+pymongo==4.1.1
+    # via -r requirements.in
 python-dateutil==2.8.1
     # via pendulum
 python-dotenv==0.14.0
@@ -46,11 +56,15 @@ pytz==2020.1
     # via flask-restful
 pytzdata==2020.1
     # via pendulum
+requests==2.27.1
+    # via -r requirements.in
 six==1.15.0
     # via
     #   flask-cors
     #   flask-restful
     #   python-dateutil
+urllib3==1.26.9
+    # via requests
 werkzeug==1.0.1
     # via
     #   flask
