@@ -9,12 +9,12 @@ import dotenv
 from pathlib import Path
 import os
 
-#explicitly providing path to '.env'
-#env_path = Path('.') / '../.env'
+# explicitly providing path to '.env'
+# env_path = Path('.') / '../.env'
 env_path = dotenv.find_dotenv(usecwd=True)
 
 dotenv.load_dotenv(dotenv_path=env_path,verbose=True)
-#load_dotenv(dotenv_path=env_path, verbose=False)
+# load_dotenv(dotenv_path=env_path, verbose=False)
 
 app_name = os.getenv('APP_NAME') if os.getenv('APP_NAME') else 'apipython' 
 app_env = os.getenv('APP_ENV') if os.getenv('APP_ENV') else 'development' 
@@ -42,4 +42,8 @@ APP_CONFIG = {
     "DB_PASSWORD": password_db,
     "DB_HOST": host_db,
     "DB_PORT": port_db,
+    "MONGO_URL": os.getenv("MONGO_URL") if os.getenv("MONGO_URL") else "mongodb://localhost:27017/",
+    "APIKEY": os.getenv("APIKEY") if os.getenv("APIKEY") else None,
+    "TIMESTAMP": os.getenv("TIMESTAMP") if os.getenv("TIMESTAMP") else None,
+    "HASH": os.getenv("HASH") if os.getenv("HASH") else None,
 }

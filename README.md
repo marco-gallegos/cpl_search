@@ -41,3 +41,12 @@ se puede levantar usando docker
 
 * instala docker y docker-compose
 * docker-compose up -d
+
+## envs necesarios
+
+APIKEY=marvel apikey
+TIMESTAMP=some number
+
+
+documentado en marvel api
+HASH=md5(timestamp+publickey+privatekey) 

@@ -6,6 +6,7 @@
 #   las actualizaciones de las librearias y/o la sincronizacion con el entorno, este archivo genera pues a requirements.txt
 #   pip-compile
 
+dnspython
 flask
 flask-cors
 flask-restful
@@ -16,3 +17,4 @@ passlib
 peewee
 pendulum
 python-dotenv
+pymongo

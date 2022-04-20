@@ -1,10 +1,12 @@
 version: "3.3"
 
 services:
-  traductor-api:
-    container_name: "traductor-api"
+  user-gateway-api:
+    container_name: "user-gateway-api"
     build: ./
     volumes:
       - ./:/app
     ports:
-      - 5000:5000
+      - 5001:5001
+    ENV:
+      - MONGO_URL=mongodb://mongo:27017/user-gateway-api
