@@ -1,0 +1,23 @@
+{
+  "name": "marvel_search",
+  "version": "1.0.0",
+  "description": "el objetivo de este repo es proveer un templete para microservicios o apis usando :",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "watch-build": "nodemon ---watch ./ --exec \"python3 api.py\" -e py"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marco-gallegos/cpl_search.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marco-gallegos/cpl_search/issues"
+  },
+  "homepage": "https://github.com/marco-gallegos/cpl_search#readme"
+}
