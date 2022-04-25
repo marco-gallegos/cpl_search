@@ -1,8 +1,8 @@
 """
 @Author Marco A. Gallegos
-@Date 2020/10/09
+@Date 2022/04/25
 @Description
-    user controller
+    comic  controller
 """
 from flask import request
 from flask_restful import Resource, reqparse
@@ -12,6 +12,7 @@ import requests
 
 
 class ComicController(object):
+    """this controller contains functions to resolve marvel api comic searches and validations"""
 
     @jwt_required()
     def search_comics():
@@ -88,13 +89,9 @@ class ComicController(object):
                 comics["image"] = comic["thumbnail"]["path"] + "." + comic["thumbnail"]["extension"]
                 comics["onsaleDate"] = comic["dates"][0]["date"]
                 response["comics"].append(comics.copy())
-        
-        print(response)
-        
         return response, 200
 
     @jwt_required()
-    @staticmethod
     def validate_comic():
         """This route validates if a commic id exists."""
         idcomic = request.args.get('idcomic') if request.args.get('idcomic') else None

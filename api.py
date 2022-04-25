@@ -9,10 +9,10 @@ from config.config import APP_CONFIG
 from flask import Flask
 from flask_cors import CORS
 from config.routes import setup_routes
+from flask_jwt_extended import (JWTManager)
 
 
-# TODO use app_name from .env
-app = Flask(__name__)
+app = Flask(APP_CONFIG['APP_NAME'])
 CORS(app, resources={r"/*": {"origins": "*"}})
 
 # Setup the Flask-JWT-Extended extension

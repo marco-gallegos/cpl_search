@@ -1,8 +1,7 @@
 from flask_restful import Api
-from flask_jwt_extended import (JWTManager)
+import controllers
 
-
-def setup_routes(app):
+def setup_routes(app, APP_CONFIG):
     """
     Setup the routes for the flask app
     :param app: flask app
